@@ -3,9 +3,8 @@
 https://www.atlassian.com/git/tutorials/dotfiles
 
 ```bash
-git init --bare $HOME/dotfiles
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-dotfiles config --local status.showUntrackedFiles no
-echo "alias dotfiles='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> $HOME/.bashrc
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+echo ".dotfiles" >> .gitignore
+git clone --bare https://github.com/sayam91/dotfiles.git $HOME/.dotfiles
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 ```
-
