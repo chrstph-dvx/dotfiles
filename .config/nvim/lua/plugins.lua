@@ -16,6 +16,11 @@ end
 return require('packer').startup({function() 
   use 'wbthomason/packer.nvim'
 
+  use {
+    'phaazon/hop.nvim',
+    branch = 'v1',
+  }
+
   -- Easy motion
   -- use 'easymotion/vim-easymotion'
   -- use 'haya14busa/incsearch.vim'

@@ -15,7 +15,7 @@ opt.expandtab=true
 opt.autoindent=true
 opt.number=true
 opt.relativenumber=true
-opt.wrap=false
+opt.wrap=true
 opt.smartcase=true
 opt.swapfile=false
 opt.backup=false
@@ -24,7 +24,7 @@ opt.incsearch=true
 opt.hlsearch=false
 opt.scrolloff=10
 opt.showmode=false -- Don't display "-- INSERT --" (not needed because of lightline)
-opt.colorcolumn="80"
+opt.colorcolumn="120"
 vim.highlight.create('ColorColumn', {ctermbg=0, guibg=lightgrey}, false)
 opt.background="dark"
 

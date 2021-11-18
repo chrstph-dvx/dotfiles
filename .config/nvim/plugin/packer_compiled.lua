@@ -69,6 +69,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["hop.nvim"] = {
+    loaded = true,
+    path = "/home/bibi/.local/share/nvim/site/pack/packer/start/hop.nvim",
+    url = "https://github.com/phaazon/hop.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/bibi/.local/share/nvim/site/pack/packer/start/packer.nvim",
