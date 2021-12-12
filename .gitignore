@@ -6,4 +6,4 @@
 ~/.config/fish/conf.d/
 ~/.config/fish/completions
 ~/.config/fish/functions/*nvm*
-
+~/.config/fish/functions/*tide*
