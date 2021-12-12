@@ -1,3 +1,3 @@
 if status is-interactive
-  source tide.fish
+  source ~/.config/fish/tide.fish
 end
