@@ -1,1 +1,5 @@
+### Nvim
+~/.config/nvim/plugin/*
+
+### Fish 
 ~/.config/fish/fish_variables
