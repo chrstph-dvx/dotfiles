@@ -44,7 +44,7 @@ set -U tide_left_prompt_items pwd\x1egit
 set -U tide_left_prompt_prefix
 set -U tide_left_prompt_separator_diff_color \ue0bc
 set -U tide_left_prompt_separator_same_color \ue0b1
-set -U tide_left_prompt_suffix \ue0bc
+set -U tide_left_prompt_suffix \ue0b0
 set -U tide_node_bg_color green
 set -U tide_node_color black
 set -U tide_node_icon \u2b22
@@ -70,7 +70,7 @@ set -U tide_pwd_icon_unwritable \uf023
 set -U tide_pwd_markers \x2ebzr\x1e\x2ecitc\x1e\x2egit\x1e\x2ehg\x1e\x2enode\x2dversion\x1e\x2epython\x2dversion\x1e\x2eruby\x2dversion\x1e\x2eshorten_folder_marker\x1e\x2esvn\x1e\x2eterraform\x1eCargo\x2etoml\x1ecomposer\x2ejson\x1eCVS\x1ego\x2emod\x1epackage\x2ejson
 set -U tide_right_prompt_frame_enabled false
 set -U tide_right_prompt_items status\x1ecmd_duration\x1econtext\x1ejobs\x1enode\x1evirtual_env\x1ephp\x1ego\x1ekubectl\x1evi_mode\x1etime
-set -U tide_right_prompt_prefix \ue0ba
+set -U tide_right_prompt_prefix \ue0b2
 set -U tide_right_prompt_separator_diff_color \ue0ba
 set -U tide_right_prompt_separator_same_color \ue0b3
 set -U tide_right_prompt_suffix

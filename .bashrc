@@ -115,3 +115,13 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+pathadd() {
+    if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
+        PATH="${PATH:+"$PATH:"}$1"
+    fi
+}
+
+pathadd "/usr/local/bin/"
+pathadd "/usr/local/opt/php@8.0/bin"
+pathadd "/usr/local/opt/php@8.0/sbin"
