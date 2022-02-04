@@ -1,4 +1,5 @@
 if status --is-interactive
+    # Git
     abbr -a cl clear
     abbr -a g git
     abbr -a ga 'git add'
@@ -13,5 +14,18 @@ if status --is-interactive
     abbr -a ggl 'git pull'
     abbr -a ggp 'git push'
     abbr -a gst 'git status'
-    abbr -a phpmi 'php bin/console doctrine:migration:migrate --no-interaction'
+
+    # Lingoda
+    abbr -a cdl 'cd ~/dev/lingoda/linguando'
+    abbr -a mi 'php bin/console doctrine:migration:migrate --no-interaction'
+    abbr -a tsd 'php bin/console lg:translations:download'
+    abbr -a tsu 'php bin/console lg:translations:upload'
+    abbr -a db 'bash devops/localdev/localdev.sh'
+    abbr -a sy 'symfony'
+    abbr -a sst 'symfony server:start -d'
+    abbr -a ss 'symfony server:stop'
+    abbr -a pst 'symfony proxy:start'
+    abbr -a ps 'symfony proxy:stop'
+    abbr -a ci 'composer install'
+
 end
