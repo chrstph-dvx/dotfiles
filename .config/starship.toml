@@ -1,0 +1,38 @@
+format = """$directory$character"""
+right_format = """$time$all"""
+
+[aws]
+disabled = true
+
+[character]
+success_symbol = "[λ](bold 68)"
+error_symbol = "[λ](bold red)"
+
+[cmd_duration]
+min_time = 500
+format = "[$duration](bold yellow) "
+
+[directory]
+truncation_length = 1
+truncation_symbol = "…/"
+format = "[$path](60)[$read_only]($read_only_style) "
+
+[line_break]
+disabled = true
+
+[nodejs]
+format = "[$version](bold green) "
+
+[time]
+disabled = false 
+format = '[$time](240) '
+time_format = "%T"
+
+[php]
+format = "[🐘$version](147 bold) "
+
+[git_branch]
+format = "[$branch]($style) "
+truncation_length = 8
+truncation_symbol = ""
+
