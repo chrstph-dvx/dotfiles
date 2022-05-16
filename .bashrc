@@ -125,3 +125,4 @@ pathadd() {
 pathadd "/usr/local/bin/"
 pathadd "/usr/local/opt/php@8.0/bin"
 pathadd "/usr/local/opt/php@8.0/sbin"
+. "$HOME/.cargo/env"
