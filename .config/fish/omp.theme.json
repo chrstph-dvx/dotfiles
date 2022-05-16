@@ -1,0 +1,63 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "git",
+          "style": "diamond",
+          "leading_diamond": "\ue0b6",
+          "trailing_diamond": "\ue0b4",
+          "background": "#FFEB3B",
+          "foreground": "#193549",
+          "template": "{{ .HEAD }}{{ if or (.Working.Deleted) (.Staging.Added) (.Working.Changed) (gt .Working.Modified 0) }} [{{ end }}{{ if gt .Working.Deleted 0}}✘{{ end }}{{ if gt .Working.Modified 0}}!{{ end }}{{ if gt .Staging.Added 0}}+{{ end }}{{ if and (.Working.Changed) (eq .Working.Deleted 0) (eq .Staging.Added 0) (eq .Working.Modified 0) }}?{{ end }}{{ if or (.Working.Deleted) (.Staging.Added) (.Working.Changed) (gt .Working.Modified 0) }}]{{ end }}",
+          "properties": {
+            "branch_icon": "",
+            "branch_max_length": 8,
+            "fetch_stash_count": false,
+            "fetch_status": false,
+            "fetch_upstream_icon": false
+          }
+        },
+        {
+          "background": "#424242",
+          "foreground": "#42E66C",
+          "leading_diamond": " \ue0b6",
+          "properties": {
+            "fetch_version": false
+          },
+          "style": "diamond",
+          "template": "\ue718{{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}",
+          "trailing_diamond": "\ue0b4",
+          "type": "node"
+        }
+      ],
+      "type": "rprompt"
+    },
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "background": "#6272a4",
+          "foreground": "#bbbbbb",
+          "leading_diamond": "",
+          "properties": {
+            "style": "folder"
+          },
+          "style": "diamond",
+          "template": "{{ .Path }}",
+          "trailing_diamond": "\ue0b0",
+          "type": "path"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "transient_prompt": {
+    "background": "transparent",
+    "foreground": "#33658a",
+    "template": "λ "
+  },
+  "version": 2
+}
