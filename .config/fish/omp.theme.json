@@ -7,10 +7,9 @@
         {
           "type": "git",
           "style": "diamond",
-          "leading_diamond": "\ue0b6",
-          "trailing_diamond": "\ue0b4",
-          "background": "#FFEB3B",
-          "foreground": "#193549",
+          "leading_diamond": "<",
+          "trailing_diamond": ">",
+          "foreground": "#33658A",
           "template": "{{ .HEAD }}{{ if or (.Working.Deleted) (.Staging.Added) (.Working.Changed) (gt .Working.Modified 0) }} [{{ end }}{{ if gt .Working.Deleted 0}}✘{{ end }}{{ if gt .Working.Modified 0}}!{{ end }}{{ if gt .Staging.Added 0}}+{{ end }}{{ if and (.Working.Changed) (eq .Working.Deleted 0) (eq .Staging.Added 0) (eq .Working.Modified 0) }}?{{ end }}{{ if or (.Working.Deleted) (.Staging.Added) (.Working.Changed) (gt .Working.Modified 0) }}]{{ end }}",
           "properties": {
             "branch_icon": "",
@@ -39,25 +38,29 @@
       "alignment": "left",
       "segments": [
         {
-          "background": "#6272a4",
-          "foreground": "#bbbbbb",
+          "foreground": "#FF80AB",
           "leading_diamond": "",
           "properties": {
             "style": "folder"
           },
-          "style": "diamond",
+          "style": "plain",
           "template": "{{ .Path }}",
           "trailing_diamond": "\ue0b0",
           "type": "path"
+        },
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#E1BEE7",
+          "template": "❯ "
         }
       ],
       "type": "prompt"
     }
   ],
   "transient_prompt": {
-    "background": "transparent",
-    "foreground": "#33658a",
-    "template": "λ "
+    "foreground": "#ff79c6",
+    "template": "-> "
   },
   "version": 2
 }
