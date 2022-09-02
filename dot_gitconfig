@@ -1,0 +1,9 @@
+[user]
+	email = contact@christophedeveaux.com
+	name = Christophe
+[pull]
+	rebase = true
+[fetch]
+	prune = true
+[credential]
+	helper = cache
