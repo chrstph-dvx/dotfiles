@@ -27,23 +27,6 @@ if status --is-interactive
     # abbr -a cdr 'cd ~/dev/rust'
     abbr -a zt 'z -t'
 
-    # Lingoda
-    # abbr -a cdl 'cd ~/dev/lingoda/linguando'
-    abbr -a mi 'php bin/console doctrine:migration:migrate --no-interaction'
-    abbr -a tsd 'php bin/console lg:translations:download'
-    abbr -a tsu 'php bin/console lg:translations:upload'
-    abbr -a db 'bash devops/localdev/localdev.sh'
-    abbr -a sy 'symfony'
-    abbr -a ss 'symfony server:start -d'
-    abbr -a sst 'symfony server:stop'
-    abbr -a px 'symfony proxy:start'
-    abbr -a pxt 'symfony proxy:stop'
-    abbr -a ci 'composer install'
-    abbr -a lin 'cd ~/dev/lingoda/linguando/ && symfony server:start -d && symfony proxy:start && bash devops/localdev/localdev.sh start'
-    abbr -a tbe yarn teacher:watch --host (ifconfig | grep "inet" | grep "broadcast" | awk '{print $2}')
-    abbr -a tfe yarn teacher_frontend:watch --host (ifconfig | grep "inet" | grep "broadcast" | awk '{print $2}')
-    abbr -a stu yarn student:watch --host (ifconfig | grep "inet" | grep "broadcast" | awk '{print $2}')
-
     # Yarn
     abbr -a y yarn
 
@@ -53,5 +36,8 @@ if status --is-interactive
     abbr -a cgc cargo check
     abbr -a cgb cargo build
     abbr -a rs rustc
+
+    # Chezmoi
+    abbr -a cm chezmoi
 
 end
