@@ -1,0 +1,11 @@
+#!/bin/sh
+
+{{ if eq .chezmoi.os "darwin" -}}
+xcode-select --install
+{{ end -}}
+
+NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+brew install fish jandedobbeleer/oh-my-posh/oh-my-posh
+curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+fisher update
