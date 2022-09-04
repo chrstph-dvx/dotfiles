@@ -1,2 +1,12 @@
 # Dotfiles
 README.md
+
+# Nvim
+~/.config/nvim/plugin/*
+
+# Fish
+~/.config/fish/fish_variables
+~/.config/fish/conf.d/
+~/.config/fish/completions
+~/.config/fish/functions/*nvm*
+~/.config/fish/functions/*tide*
