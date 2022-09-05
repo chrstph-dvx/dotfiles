@@ -1,11 +1,10 @@
 #!/bin/sh
 
 {{ if eq .chezmoi.os "darwin" -}}
-xcode-select --install
+  xcode-select --install
 {{ end -}}
 
-which -s brew
-if [[ $? != 0 ]] ; then
+if [[ $(command -v brew) == "" ]]; then  
   # Install Homebrew
   NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 else
