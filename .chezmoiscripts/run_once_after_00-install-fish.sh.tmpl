@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo -e "Setup Fish Shell"
+echo -e "\033[0;32m Setup fish shell \033[0m"
 
 brew install fish jandedobbeleer/oh-my-posh/oh-my-posh
 
@@ -10,4 +10,4 @@ if [ $SHELL != $(which fish) ]; then
   chsh -s $(which fish)
 fi
 
-echo -e "Finish Setting Up Fish Shell"
+echo -e "\033[0;32m Setup fish shell done \033[0m"
