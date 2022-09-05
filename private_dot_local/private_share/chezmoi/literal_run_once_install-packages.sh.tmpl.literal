@@ -4,8 +4,16 @@
 xcode-select --install
 {{ end -}}
 
-NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+which -s brew
+if [[ $? != 0 ]] ; then
+  # Install Homebrew
+  NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+else
+  brew update
+fi
 
+# Install Fish and prompt
 brew install fish jandedobbeleer/oh-my-posh/oh-my-posh
+# Install Fish package manager 
 curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 fisher update
