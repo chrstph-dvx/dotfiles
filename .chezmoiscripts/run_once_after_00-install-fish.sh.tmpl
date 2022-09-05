@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo -e "Setup Fish Shell"
+
+brew install fish jandedobbeleer/oh-my-posh/oh-my-posh
+
+# Set fish as default shell
+if [ $SHELL != $(which fish) ]; then
+  echo "Changing default shell to fish"
+  chsh -s $(which fish)
+fi
+
+echo -e "Finish Setting Up Fish Shell"
