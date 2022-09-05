@@ -1,18 +1,13 @@
-#!/bin/sh
+#!/bin/bash
 
 {{ if eq .chezmoi.os "darwin" -}}
   xcode-select --install
 {{ end -}}
 
 if [[ $(command -v brew) == "" ]]; then  
-  # Install Homebrew
-  NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  # install homebrew
+  noninteractive=1 /bin/bash -c "$(curl -fssl https://raw.githubusercontent.com/homebrew/install/head/install.sh)"
 else
   brew update
 fi
 
-# Install Fish and prompt
-brew install fish jandedobbeleer/oh-my-posh/oh-my-posh
-# Install Fish package manager 
-curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
-fisher update
