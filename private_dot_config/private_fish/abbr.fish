@@ -16,20 +16,21 @@ if status --is-interactive
     abbr -a ggp 'git push'
     abbr -a ggpf 'git push --force'
     abbr -a gst 'git status'
+    abbr -a gm 'git merge'
     abbr -a grb 'git rebase'
     abbr -a grbm 'git rebase master'
     abbr -a grba 'git rebase --abort'
     abbr -a grbc 'git rebase --continue'
     abbr -a gsta 'git stash'
+    abbr -a ghpr 'gh pr checkout'
 
     # Directory
-    # abbr -a cdd 'cd ~/dev'
-    # abbr -a cdr 'cd ~/dev/rust'
     abbr -a zt 'z -t'
 
     # Yarn
-    abbr -a y yarn
-
+    abbr -a y 'yarn'
+    abbr -a yr 'yarn run'
+    
     # Rust
     abbr -a cg cargo
     abbr -a cgr cargo run
@@ -40,4 +41,8 @@ if status --is-interactive
     # Chezmoi
     abbr -a cm chezmoi
 
+    # Offchain Labs
+    abbr -a yru 'yarn run start_ui'
+    abbr -a yrs 'yarn run start_sdk'
+    
 end

@@ -25,7 +25,8 @@ opt.hlsearch=false
 opt.scrolloff=10
 opt.showmode=false -- Don't display "-- INSERT --" (not needed because of lightline)
 opt.colorcolumn="120"
-vim.highlight.create('ColorColumn', {ctermbg=0, guibg=lightgrey}, false)
+-- vim.highlight.create('ColorColumn', {ctermbg=0, guibg=lightgrey}, false)
+vim.api.nvim_set_hl(0,'CursorColumn',{ bg='#ff0000' })
 opt.background="dark"
 
 g.mapleader = " "
