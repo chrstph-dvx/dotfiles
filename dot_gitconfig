@@ -1,9 +1,23 @@
 [user]
-	email = contact@christophedeveaux.com
-	name = Christophe
+  email = contact@christophedeveaux.com
+  name = Christophe
+
+[push]
+  autoSetupRemote = true
+  default = current
+
 [pull]
-	rebase = true
+  rebase = true
+
 [fetch]
-	prune = true
+  prune = true
+
 [credential]
-	helper = cache
+  helper = cache
+
+[credential "https://github.com"]
+	helper = 
+	helper = !/home/linuxbrew/.linuxbrew/Cellar/gh/2.20.2/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/home/linuxbrew/.linuxbrew/Cellar/gh/2.20.2/bin/gh auth git-credential

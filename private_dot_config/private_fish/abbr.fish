@@ -16,12 +16,13 @@ if status --is-interactive
     abbr -a ggp 'git push'
     abbr -a ggpf 'git push --force'
     abbr -a gst 'git status'
-    abbr -a gm 'git merge'
+    abbr -a gm 'git merge master'
     abbr -a grb 'git rebase'
     abbr -a grbm 'git rebase master'
     abbr -a grba 'git rebase --abort'
     abbr -a grbc 'git rebase --continue'
     abbr -a gsta 'git stash'
+    abbr -a gstd 'git stash show -p stash@{1}'
     abbr -a ghpr 'gh pr checkout'
 
     # Directory
@@ -40,6 +41,9 @@ if status --is-interactive
 
     # Chezmoi
     abbr -a cm chezmoi
+
+    # Zellij
+    abbr -a zl zellij --layout arb-bridge
 
     # Offchain Labs
     abbr -a yru 'yarn run start_ui'
