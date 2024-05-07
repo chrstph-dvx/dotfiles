@@ -1,4 +1,5 @@
 [git]
   autoCommit = true
   autoPush = true
-  commitMessageTemplateFile = ".commit_message.tmpl"
+  autoAdd = true
+  commitMessageTemplate = "{{ "{{" }} promptString \"Commit message\" {{ "}}" }}"
