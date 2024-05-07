@@ -27,9 +27,6 @@ if status --is-interactive
     abbr -a ghpr 'gh pr checkout'
     abbr -a gr 'git reset --soft $(git merge-base --fork-point master)'
 
-    # Directory
-    abbr -a zt 'z -t'
-
     # Yarn
     abbr -a y 'yarn'
     abbr -a yr 'yarn run'
@@ -47,9 +44,4 @@ if status --is-interactive
 
     # Zellij
     abbr -a zl zellij --layout arb-bridge
-
-    # Offchain Labs
-    abbr -a yru 'yarn run start_ui'
-    abbr -a yrs 'yarn run start_sdk'
-    
 end
