@@ -1,0 +1,5 @@
+{
+  "laserwave.vim": { "branch": "master", "commit": "123afe49bf9cd9589788cbb600d0f08aa4fb48d4" },
+  "lazy.nvim": { "branch": "main", "commit": "31ddbea7c10b6920c9077b66c97951ca8682d5c8" },
+  "leap.nvim": { "branch": "main", "commit": "626be4c4ec040aeaf6466c9aae17ee0ab09f1a5b" }
+}

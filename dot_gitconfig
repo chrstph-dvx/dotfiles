@@ -1,6 +1,7 @@
 [user]
   email = contact@christophedeveaux.com
   name = Christophe
+	signingkey = C8E966340349EA9D
 
 [push]
   autoSetupRemote = true
@@ -16,8 +17,22 @@
   helper = cache
 
 [credential "https://github.com"]
-	helper = 
-	helper = !/home/linuxbrew/.linuxbrew/Cellar/gh/2.20.2/bin/gh auth git-credential
+  helper =
+  helper = !/home/linuxbrew/.linuxbrew/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-	helper = 
-	helper = !/home/linuxbrew/.linuxbrew/Cellar/gh/2.20.2/bin/gh auth git-credential
+  helper = 
+  helper = !/home/linuxbrew/.linuxbrew/bin/gh auth git-credential
+[init]
+	defaultBranch = main
+[core]
+	editor = code --wait
+	symlinks = true
+[http]
+	postBuffer = 1048576000
+	proxy = 
+[commit]
+	gpgSign = true
+[gpg]
+	program = /usr/bin/gpg
+[rerere]
+	enabled = true

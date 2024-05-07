@@ -6,7 +6,6 @@ local bo = vim.bo
 local fn = vim.fn
 local cmd = vim.cmd
 local opt = vim.opt
-local api = vim.api
 
 opt.encoding="utf-8"
 opt.errorbells=false
@@ -30,8 +29,8 @@ opt.colorcolumn="120"
 -- cmd[[highlight LeapForward guibg=10 ctermfg=6 ctermbg=5]]
 -- cmd[[highlight LeapBackward ctermfg=3 ctermbg=4]]
 opt.background="dark"
-api.nvim_set_hl(0, "ColorColumn", {ctermbg = 5, nocombine = true })
--- api.nvim_set_hl(0, "LeapLabelPrimary", {fg = red, bg = blue, bold = true })
--- api.nvim_set_hl(0, "LeapLabelSecondary", {fg = blue, bold = true })
+vim.api.nvim_set_hl(0, "ColorColumn", {ctermbg = 5, nocombine = true })
+vim.api.nvim_set_hl(0, "LeapLabelPrimary", {fg = red, bg = blue, bold = true, nocombine = true })
+vim.api.nvim_set_hl(0, "LeapLabelSecondary", {fg = blue, bold = true, nocombine = true })
 -- cmd.colorscheme('laserwave256')
 g.mapleader = " "

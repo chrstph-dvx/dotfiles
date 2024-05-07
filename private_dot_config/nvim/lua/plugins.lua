@@ -1,44 +1,24 @@
--- Run PackerCompile when this file is edited
-vim.cmd([[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
-  augroup end
-]])
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
--- Bootstrap packer (first time on any config)
-local fn = vim.fn
-local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-if fn.empty(fn.glob(install_path)) > 0 then
-  packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
 end
+vim.opt.rtp:prepend(lazypath)
 
-return require('packer').startup({function() 
-  use 'wbthomason/packer.nvim'
-
-
-  -- Easy motion
-  -- use 'easymotion/vim-easymotion'
-
-  use 'ggandor/lightspeed.nvim'
-
-  -- Statusline
-  -- use {
-  --  'hoob3rt/lualine.nvim',
-  --  requires = {'kyazdani42/nvim-web-devicons', opt = true},
-  -- }
-
-  
-
-  if packer_bootstrap then
-    require('packer').sync()
-  end
-end,
--- Display packer in floating window
-config = {
-  display = {
-    open_fn = function()
-      return require('packer.util').float({ border = 'single' })
-    end
-  }
-}})
+require("lazy").setup({
+  {
+    'ggandor/leap.nvim',
+      config = function()
+        require('leap').create_default_mappings()
+        vim.api.nvim_set_hl(3, 'LeapPrimary', { link = 'Comment' })
+      end,
+  },
+  'averak/laserwave.vim'
+})

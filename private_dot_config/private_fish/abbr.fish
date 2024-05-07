@@ -6,8 +6,9 @@ if status --is-interactive
     abbr -a gaa 'git add --all'
     abbr -a gb 'git branch'
     abbr -a gbD 'git branch -D'
-    abbr -a gcam 'git commit -a -m'
-    abbr -a gcn! 'git commit -v --no-edit --amend'
+    abbr -a gcm 'git commit -S -m'
+    abbr -a gcam 'git commit -S -a -m'
+    abbr -a gcn! 'git commit -S -v --no-edit --amend'
     abbr -a gco 'git checkout'
     abbr -a gcom 'git checkout master'
     abbr -a gcob 'git checkout -b'
@@ -24,6 +25,7 @@ if status --is-interactive
     abbr -a gsta 'git stash'
     abbr -a gstd 'git stash show -p stash@{1}'
     abbr -a ghpr 'gh pr checkout'
+    abbr -a gr 'git reset --soft $(git merge-base --fork-point master)'
 
     # Directory
     abbr -a zt 'z -t'
@@ -31,6 +33,7 @@ if status --is-interactive
     # Yarn
     abbr -a y 'yarn'
     abbr -a yr 'yarn run'
+    abbr -a yd 'yarn dev'
     
     # Rust
     abbr -a cg cargo

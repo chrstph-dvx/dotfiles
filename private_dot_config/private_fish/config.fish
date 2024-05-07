@@ -5,6 +5,7 @@ if status is-interactive
 
   # Settings
   set -gx EDITOR nvim
+  set -gx GPG_TTY (tty)
 
   # Prompt
   # starship init fish | source
@@ -25,3 +26,9 @@ sudo /etc/init.d/dbus start &> /dev/null
 export LIBGL_ALWAYS_INDIRECT=1
 
 end
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
+
+export PATH="$PATH:/home/bibi/.foundry/bin"
