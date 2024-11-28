@@ -16,7 +16,7 @@ if status --is-interactive
     abbr -a ggl 'git pull'
     abbr -a ggp 'git push'
     abbr -a ggpf 'git push --force'
-    abbr -a gst 'git status'
+    abbr -a gst 'git status -sb'
     abbr -a gm 'git merge master'
     abbr -a grb 'git rebase'
     abbr -a grbm 'git rebase master'
@@ -26,6 +26,7 @@ if status --is-interactive
     abbr -a gstd 'git stash show -p stash@{1}'
     abbr -a ghpr 'gh pr checkout'
     abbr -a gr 'git reset --soft $(git merge-base --fork-point master)'
+    abbr -a glo 'git log --oneline'
 
     # Yarn
     abbr -a y 'yarn'

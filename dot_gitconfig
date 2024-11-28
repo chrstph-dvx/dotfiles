@@ -27,6 +27,7 @@
 [core]
 	editor = code --wait
 	symlinks = true
+	excludesFile = /home/bibi/.gitignore
 [http]
 	postBuffer = 1048576000
 	proxy = 
@@ -36,3 +37,5 @@
 	program = /usr/bin/gpg
 [rerere]
 	enabled = true
+[rebase]
+	updateRefs = true
