@@ -1,7 +1,7 @@
 [user]
   email = contact@christophedeveaux.com
   name = Christophe
-	signingkey = C8E966340349EA9D
+	signingkey = {{ .gpg_key }} 
 
 [push]
   autoSetupRemote = true
@@ -17,11 +17,11 @@
   helper = cache
 
 [credential "https://github.com"]
-  helper =
-  helper = !/home/linuxbrew/.linuxbrew/bin/gh auth git-credential
+  helper = 
+  helper = {{ .gh_path }} auth git-credential
 [credential "https://gist.github.com"]
   helper = 
-  helper = !/home/linuxbrew/.linuxbrew/bin/gh auth git-credential
+  helper = {{ .gh_path }} auth git-credential
 [init]
 	defaultBranch = main
 [core]
@@ -34,7 +34,7 @@
 [commit]
 	gpgSign = true
 [gpg]
-	program = /usr/bin/gpg
+	program = {{ .gpg_path }} 
 [rerere]
 	enabled = true
 [rebase]

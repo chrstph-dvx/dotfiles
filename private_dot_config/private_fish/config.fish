@@ -21,9 +21,6 @@ if status is-interactive
   set -U Z_DATA "$HOME/.config/fish/.zdata"
 
 #export DISPLAY=$(grep -m 1 nameserver /etc/resolv.conf | awk '{print $2}'):0.0
-export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
-sudo /etc/init.d/dbus start &> /dev/null
-export LIBGL_ALWAYS_INDIRECT=1
 
 end
 
